@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <body ng-app='myApp'>
+    <h2>YOUR SHOPPING BAG</h2>
+    <div ng-controller="shoppingCartCtrl">
+        <table class="table">
+           <tr>
+                
+                <th>{{data.productsInCart.length}} ITEMS</th>
+                <th class="col-xs-2"></th>
+                <th class="col-xs-2">SIZE</th>
+                <th class="col-xs-2">QTY</th>
+                <th class="col-xs-2">PRICE</th>
+            </tr>
+            <tr ng:repeat="item in data.productsInCart">
+                <td class="col-xs-2"><img src='{{item.p_image}}'></td>
+                <td class="col-xs-4">{{item.p_name}}<br>Style #:{{item.p_style}}<br>Colour:{{item.p_selected_color.name}}<br>
+                <br><br><span ng-click="editItem(item.p_id)">EDIT</a>&nbsp | &nbsp<span ng-click="removeItem(item.p_id)">X REMOVE</span> | &nbsp<span>SAVE FOR LATER</span></td>    
+                <td class="col-xs-2">{{item.p_selected_size.code}}</td>
+                <td class="col-xs-2"><input type="number" ng:model="item.p_quantity" disabled style="width: 18%;"></td>
+                <td class="col-xs-2">{{item.c_currency}}{{item.p_price}}</td>
+            </tr>
+         </table>
+            <div style="text-align: center;">
+                <span>ESTIMATED TOTAL:</span>
+                <span>{{total() | currency}}</span>
+            </div>
+       <modal visible="showModal"></modal>
+    </div>
+</body>
+
+</html>
