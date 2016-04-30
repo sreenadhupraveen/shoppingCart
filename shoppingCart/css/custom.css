@@ -1,0 +1,66 @@
+.modal-dialog {
+	height: 100%;
+}
+.modal-content {
+	height: 46%;
+}
+.main-boday {
+	margin-top: 25px;
+	margin-left: 27px;
+}
+.p_name {
+	font-size: xx-large;
+	color: #939395;
+}
+.p_price {
+ 	font-size: xx-large;
+	color: #444444
+}
+.p_image {
+	float: right;
+	margin-right: 128px;
+	top: 0px;
+	margin-top: -126px;
+}
+.total_div {
+	text-align: center;
+}
+.clickable {
+	cursor:pointer;
+}
+.sub_total {
+	font-size: 24px;
+	float: right;
+	margin-right: 12%;
+}
+.sub_total_text {
+	font-size: 24px;
+}
+.hr{
+	width: 73%;
+    border: 2px solid gray;
+    float: right;
+} 
+.update-cart {
+	margin-top: 4%;
+    margin-left: 4%;
+} 
+#available_sizes {
+	height:33px;
+	font-size:20px;
+	width: 18%;
+}
+#available_qtys {
+	height:33px;
+	font-size:20px;
+	width: 9%;
+	margin-left: 4%;
+}
+#qty_textbox {
+	width: 18%;
+}
+#check_out {
+	float: right;
+    margin-right: -57%;
+    margin-top: 5%;
+}
