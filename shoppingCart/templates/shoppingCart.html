@@ -9,7 +9,7 @@
 			<th class="col-xs-2">PRICE</th>
 		</tr>
 		<tr ng:repeat="item in productData.productsInCart">
-			<td class="col-xs-2"><img src='{{item.p_image}}'></td>
+			<td class="col-xs-2"><img class="clickable" ng-click="editItem(item.p_id)" src='{{item.p_image}}'></td>
 			<td class="col-xs-4">
 			<p>{{item.p_name}}</p>
 			<p>Style #:{{item.p_style}}</p>
@@ -25,11 +25,18 @@
 	 </table>
 	 <div class="footer" ng-show="productData.productsInCart.length > 0">
 			<div class="total_div" >
-				<span class="sub_total_text">SUB TOTAL:</span>
+				<span class="sub_total_text">TOTAL:</span>
 				 <span class="sub_total">{{total() | currency}}<span>
 			</div>
 			<hr class="hr">
-			<button type="button" class="btn btn-primary" id="check_out">CHECKOUT</button>
+			<div class="shopping">
+				<span class="shopping_text">Continue Shopping</span>
+				<button type="button" class="btn btn-primary" id="check_out">CHECKOUT</button>
+				<div class="secure_checkout">
+				<img src="images/lock.jpg">
+				<span>Seure checkout.Shopping always safe & secure</span>
+				</div>
+			</div>
 	</div>
 	<div ng-show="productData.productsInCart.length == 0">
 	<hr>

@@ -33,6 +33,20 @@
 	float: right;
 	margin-right: 12%;
 }
+.shopping {
+	margin-top: -6px;
+    float: right;
+    margin-right: 12%;
+}
+
+.shopping_text{
+	text-decoration: underline;
+}
+
+.secure_checkout{
+	margin-top: 20px;
+}
+
 .sub_total_text {
 	font-size: 24px;
 }
@@ -60,7 +74,9 @@
 	width: 18%;
 }
 #check_out {
-	float: right;
-    margin-right: -57%;
-    margin-top: 5%;
+	margin-right: -8%;
+    float: right;
+    margin-top: -5px;
 }
+
+    
